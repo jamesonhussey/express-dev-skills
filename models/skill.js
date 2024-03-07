@@ -15,7 +15,15 @@ function getOne(id) {
     return skill
 }
 
+function create(skill) {
+    //Add an ID
+    skill.id = Date.now() % 1000000
+    skill.opinion = false
+    skills.push(skill)
+}
+
 module.exports = {
     getAll,
-    getOne
+    getOne,
+    create
 }

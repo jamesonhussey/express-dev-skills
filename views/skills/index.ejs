@@ -1,27 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Express To-dos</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
-
-<body>
-    <a href="/">Home</a>
-    <h1>Skills</h1>
+<%- include('../partials/header') %>
     <ul>
         <% skills.forEach(function(skill) { %>
             <li>
                 <a href="/skills/<%= skill.id %>">
                     <%= skill.skill %>
                 </a>
-                -
-                <%= skill.opinion ? 'I like this one!' : 'This one is mid so far!' %>
+                <!-- -
+                <%= skill.opinion ? 'I like this one!' : 'This one is mid so far!' %> -->
             </li>
             <% }); %>
     </ul>
-</body>
-
-</html>
+    <a href="/skills/new">Add a Skill</a>
+<%- include('../partials/footer') %>
